@@ -1,0 +1,14 @@
+.cardBox {
+    width: 28%;
+    height: 20vw;
+    border-radius: 10px;
+    background: linear-gradient(to bottom,#ff6161, #853434);
+    position: relative;
+}
+
+.titleCard {
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    color: white;
+}

@@ -1,0 +1,24 @@
+.footerContainer {
+    background-color: black;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color:white;
+    position: relative;
+}
+.kasaFooter {
+    width: 10%;
+    position:absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+}
+.footerContainer p {
+    margin-top: 60px;
+    position:absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+}
