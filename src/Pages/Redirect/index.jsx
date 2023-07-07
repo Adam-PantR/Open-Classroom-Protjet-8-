@@ -1,9 +1,19 @@
-function Redirect() {
+import '../../Styles/App.css'
+import Header from "../../Components/Header"
+import Redirect from "../../Components/Redirect"
+import Footer from "../../Components/Footer"
+
+
+
+function Redirected() {
     return (
       <div>
-        <h2>Page 404</h2>
+        <Header />
+        <Redirect />
+        <Footer />
       </div>
+      
     )
   }
-  export default Redirect
+  export default Redirected
   

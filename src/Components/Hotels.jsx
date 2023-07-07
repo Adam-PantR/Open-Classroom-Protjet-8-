@@ -3,12 +3,14 @@ import CategorieHotels from './CategorieHotels'
 import FilledStars from './FilledStars'
 import EmptyStars from './EmptyStars'
 import Annonces from '../Datas/Annonces.json'
-import Carrousel from './Carrousel/Carrousel'
+import Carrousel from './Carrousel'
+import Description from './Description'
+import Equipements from './Equipements'
 
 function Hotels() {
 
     // const filteredItem = Annonces.list.filter(item => item.id === 'c67ab8a7');
-    const appartementCosy = Annonces.filter(item => item.id === 'b9123946');
+    const appartementCosy = Annonces.filter(item => item.id === 'bc6f7112');
     const currentAppartement = appartementCosy[0];
     
     return (
@@ -29,12 +31,18 @@ function Hotels() {
                 </div>
                 <div className='starsContainer'>
                     <FilledStars />
-                    <FilledStars />
-                    <FilledStars />
                     <EmptyStars />
                     <EmptyStars />
                 </div>
             </div>
+            <div>
+                <Description />
+                
+            </div>
+            <div>
+                <Equipements />
+            </div>
+            
             
             
             

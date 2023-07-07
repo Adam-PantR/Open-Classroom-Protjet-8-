@@ -1,5 +1,6 @@
+@import '../Utils/Variables.scss';
 .hotelContainer {
-    color: #FF6060;
+    color: $primary-color;
     h1 {
         font-size: 36px;
     }
@@ -17,7 +18,7 @@
         flex-direction: row;
         position: relative;
         align-items: center;
-        color: #FF6060;
+        color: $primary-color;
         margin-top: 20px;
 
         .title-autor-position {
@@ -44,14 +45,27 @@
             flex-direction: row;
             position: absolute;
             right: 0;
+            margin-right: 22px;
             .filledStar {
-                color: #FF6060;
+                color: $primary-color;
                 margin-left: 5px;
+                display: flex;
+                flex-direction: row;
             }
+        }
+        .emptyStarsContainer {
+            display: flex;
+            flex-direction: row;
+            position: absolute;
+            right: 0;
             .emptyStars {
                 color:#E3E3E3 !important;
                 margin-left: 5px;
-            }
+                right: 0;
+                display: flex;
+                flex-direction: row;
+                }
+            
         }
     }
     .categorieContainer {
@@ -61,12 +75,31 @@
             color:white;
             width: 175px;
             height: 25px;
-            background-color: #FF6060;
+            background-color: $primary-color;
             border-radius: 10px;
             margin-right: 20px;
             text-align: center;
             padding-top: 5px;
         }
         
+    }
+}
+
+.Redirect {
+    color : $primary-color;
+    position: relative;
+    text-align: center;
+    margin-bottom: 50px;
+    h1 {
+        font-size: 400px;
+        margin-bottom: 0;
+        margin-top:25px;
+    }
+    h2 {
+        font-size: 36px;
+    } 
+    a {
+        text-decoration: none !important;
+        color: $primary-color;
     }
 }
