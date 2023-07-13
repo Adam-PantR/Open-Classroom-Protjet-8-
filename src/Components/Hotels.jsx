@@ -15,7 +15,7 @@ function Hotels() {
     
     return (
         <div className='hotelContainer'>
-            {/* <Carrousel /> */}
+            <Carrousel />
                         <img src={currentAppartement.cover} className='hotelImage' alt="Image de l'hôtel" />
             <div className='titleAutor'>
                         <h1>{currentAppartement.title}</h1>
@@ -31,21 +31,12 @@ function Hotels() {
                 </div>
                 <div className='starsContainer'>
                     <FilledStars />
-                    <EmptyStars />
-                    <EmptyStars />
                 </div>
             </div>
-            <div>
-                <Description />
-                
-            </div>
-            <div>
-                <Equipements />
-            </div>
-            
-            
-            
-            
+            <div className='description-equipements-container'>
+                    <Description />
+                    <Equipements />
+            </div>     
         </div>
     )
 }

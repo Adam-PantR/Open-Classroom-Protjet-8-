@@ -4,11 +4,13 @@ import Home from '../Pages/Home/index'
 
 function Header() {
     return (
-        <div className='header'>
-            <img src={Kasa} className="kasa" alt="logo" />
-            <div className='Accueil'>          
-                <a href='../Home'>Accueil</a>                  
-                <a>A propos</a>
+        <div className='header-container'>
+            <div className='header'>
+                <img src={Kasa} className="kasa" alt="logo" />
+                <div className='Accueil'>          
+                    <a href='../Home'>Accueil</a>                  
+                    <a>A propos</a>
+                </div>
             </div>
         </div>
         )

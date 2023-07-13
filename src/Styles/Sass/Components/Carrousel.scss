@@ -1,4 +1,5 @@
 @import '../Utils/Variables.scss';
+
 .carousel {
     position: relative;
     width: 400px;
@@ -16,7 +17,6 @@
     width: 100%;
     height: 100%;
   }
-  
   .carousel-btn {
     position: absolute;
     top: 50%;
@@ -29,11 +29,17 @@
     font-size: 14px;
     cursor: pointer;
   }
-  
+  .carousel__item {
+    flex: 0 0 300px;
+    margin-right: 10px;
+  }
+  .carousel__caption {
+    text-align: center;
+    margin-top: 10px;
+  }
   .prev-btn {
     left: 10px;
   }
-  
   .next-btn {
     right: 10px;
   }

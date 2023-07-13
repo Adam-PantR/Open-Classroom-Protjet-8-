@@ -15,7 +15,6 @@ function Equipements() {
           setIsVisible(isVisible => !isVisible)
           console.log(isVisible) 
         }
-   
     return (
             <div className="dropdown" id="dropdownMenu" onClick={handleClickEquipements}>
                 <button className="btn">Equipements<div className={`arrow ${isVisible ? "arrow-bottom" : "arrow-top" }`}></div></button>

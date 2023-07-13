@@ -7,7 +7,7 @@
 }
 
 .cardContainer {
-    width: 100%;
+    width: 98%;
     margin-top: 50px;
     border-radius: 25px;
     display: flex;
@@ -21,3 +21,35 @@
     flex-direction: row;
     justify-content: space-around;
 }
+.cardBox {
+    width: 100%;
+    height: 18vw;
+    border-radius: 10px;
+    position: relative;
+  }
+
+.parent {
+    display: grid;
+    padding: 25px;
+    margin-right: 25px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-column-gap: 50px;
+    grid-row-gap: 20px;
+    }
+    
+.div1 { grid-area: 1 / 1 / 8 / 4; }
+.imageLocation {
+    z-index: 1;
+}
+.titleContainer {
+    position: relative;
+}
+.titleLocation {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 2;
+    color:#F6F6F6;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+    }

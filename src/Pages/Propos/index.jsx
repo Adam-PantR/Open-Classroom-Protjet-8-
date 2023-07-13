@@ -7,7 +7,8 @@ function Propos() {
     return (
       <div>
           <Header />
-          <div className='a-propos-container'>
+            <img className='banner-a-propos' src="../../Images/banner-a-propos.jpg" alt="banner of mountain" />
+            <div className='a-propos-container'>
             <div className='a-propos-div'>Fiabilité<div className='arrow'></div></div>
             <div className='a-propos-div'>Respect<div className='arrow'></div></div>
             <div className='a-propos-div'>Service<div className='arrow'></div></div>

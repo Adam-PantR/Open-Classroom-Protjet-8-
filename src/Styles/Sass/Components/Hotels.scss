@@ -52,12 +52,6 @@
                 display: flex;
                 flex-direction: row;
             }
-        }
-        .emptyStarsContainer {
-            display: flex;
-            flex-direction: row;
-            position: absolute;
-            right: 0;
             .emptyStars {
                 color:#E3E3E3 !important;
                 margin-left: 5px;
@@ -65,8 +59,21 @@
                 display: flex;
                 flex-direction: row;
                 }
-            
         }
+        // .emptyStarsContainer {
+        //     display: flex;
+        //     flex-direction: row;
+        //     position: absolute;
+        //     right: 0;
+        //     .emptyStars {
+        //         color:#E3E3E3 !important;
+        //         margin-left: 5px;
+        //         right: 0;
+        //         display: flex;
+        //         flex-direction: row;
+        //         }
+            
+        // }
     }
     .categorieContainer {
         display: flex;
@@ -82,6 +89,12 @@
             padding-top: 5px;
         }
         
+    }
+    .description-equipements-container{
+        width: 82%;
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
     }
 }
 

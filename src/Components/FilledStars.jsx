@@ -15,10 +15,19 @@ function FilledStars() {
         componentsToRender.push(<div className='filledStar'><FontAwesomeIcon key={"filledStar" + i} icon={faStar} /></div>);
       }
     }
+    const unRating = 5-currentAppartement.rating;
+    const componentsToRenderEmpty = [];
+    if (unRating > 0) {
+      for (let i = 0; i < unRating; i++) {
+        componentsToRenderEmpty.push(<div className='emptyStars'><FontAwesomeIcon key={"emptyStar" + i} icon={faStar} /></div>);
+      }
+    }
+    
     
     return (
       <div className='starsContainer'>
         {componentsToRender.map((component) => component)}
+        {componentsToRenderEmpty.map((component) => component)}
       </div>
     );}
 

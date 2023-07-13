@@ -8,9 +8,7 @@ import Footer from "../../Components/Footer"
 function Redirected() {
     return (
       <div>
-        <Header />
         <Redirect />
-        <Footer />
       </div>
       
     )
