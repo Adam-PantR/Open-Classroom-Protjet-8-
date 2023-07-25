@@ -1,16 +1,12 @@
-import '../Styles/App.css'
-import BannerJPG from '../Images/banner.jpg'
+import "../Styles/App.css";
 
-function Banner() {
-    return (
-        <div className='divGlobaleBanner'>
-            <div className='divBanner'>
-                <img src={BannerJPG} className="banner" alt="banner" />
-                <span className='spanBanner'>Chez vous, partout et ailleurs</span>
-            </div>
-            
-        </div>
-    )
+function Banner(props) {
+  return (
+    <div className="divBanner">
+      <img src={props.src} className="banner" alt="banner" />
+      {props.title && <span className="spanBanner">{props.title}</span>}
+    </div>
+  );
 }
 
-export default Banner
+export default Banner;

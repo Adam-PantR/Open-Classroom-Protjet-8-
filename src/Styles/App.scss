@@ -7,4 +7,9 @@
 @import 'Sass/Components/Header.scss';
 @import 'Sass/Components/Home.scss';
 @import 'Sass/Components/Description.scss';
-@import 'Sass/Components/Propos.scss'
+@import 'Sass/Components/Propos.scss';
+@import 'Sass/Fonts/Fonts.scss';
+
+a, div, p, span, button, b, strong {
+    font-family: Montserrat;
+}

@@ -21,8 +21,34 @@
   transform: translate(-50%, -50%);
   font-size: 48px;
   color: white;
+  text-shadow: 2px 2px 2px black;
 }
 
+@media (max-width: 1024px) and (min-width: 720px) {
+  .divBanner {
+    width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+  }
+  .banner {
+    margin-top: 0px;
+    border-radius: 25px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    position: relative;
+  }
+  .spanBanner {
+    position: absolute;
+    top: 50%;
+    left: 37%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+  }
+}
 .cardBox {
   width: 28%;
   height: 20vw;
@@ -40,8 +66,7 @@
 
 .carousel {
   position: relative;
-  width: 400px;
-  height: 200px;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -69,12 +94,43 @@
   cursor: pointer;
 }
 
-.carousel__item {
+.carousel-container {
+  display: flex;
+  position: relative;
+  overflow-x: scroll;
+  width: 100%;
+  border-radius: 25px;
+}
+.carousel-container .left-arrow {
+  position: absolute;
+  left: 0;
+  top: 40%;
+}
+.carousel-container .right-arrow {
+  position: absolute;
+  right: 0;
+  top: 40%;
+}
+.carousel-container .carousel-span {
+  color: white;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+}
+.carousel-container .carousel-image {
+  width: 100%;
+  object-fit: cover;
+  height: 300px;
+}
+.carousel-container .carousel__item {
   flex: 0 0 300px;
   margin-right: 10px;
 }
-
-.carousel__caption {
+.carousel-container .carousel__item img {
+  width: 100%;
+  height: auto;
+}
+.carousel-container .carousel__item .carousel__caption {
   text-align: center;
   margin-top: 10px;
 }
@@ -119,6 +175,7 @@
 }
 .hotelContainer h1 {
   font-size: 36px;
+  font-weight: 500;
 }
 .hotelContainer .hotelImage {
   margin-top: 50px;
@@ -187,9 +244,10 @@
   padding-top: 5px;
 }
 .hotelContainer .description-equipements-container {
-  width: 82%;
+  width: 100%;
   display: flex;
   flex-direction: row;
+  gap: 76px;
   justify-content: space-between;
 }
 
@@ -212,6 +270,169 @@
   color: #FF6060;
 }
 
+.tablette-position {
+  display: none;
+}
+
+@media (max-width: 1024px) and (min-width: 375px) {
+  .hotelContainer {
+    color: #FF6060;
+  }
+  .hotelContainer h1 {
+    font-size: 30px;
+    font-weight: 400;
+  }
+  .hotelContainer .hotelImage {
+    margin-top: 0px;
+    border-radius: 25px;
+    width: 100%;
+    height: 415px;
+    object-fit: cover;
+  }
+  .hotelContainer .location {
+    margin-top: -10px;
+  }
+  .hotelContainer .titleAutor-tablette {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    align-items: center;
+    color: #FF6060;
+    margin-top: 0;
+    font-size: 24px;
+    margin-left: 20px;
+  }
+  .hotelContainer .titleAutor-tablette .title-autor-position {
+    position: absolute;
+    right: 0px;
+  }
+  .hotelContainer .titleAutor-tablette .profile-cercle {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+  }
+  .hotelContainer .titleAutor {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    align-items: center;
+    color: #FF6060;
+    margin-top: 20px;
+  }
+  .hotelContainer .titleAutor div {
+    display: none;
+  }
+  .hotelContainer .titleAutor .title-autor-position {
+    position: absolute;
+    right: 0;
+    font-size: 20px;
+  }
+  .hotelContainer .titleAutor .profile-cercle {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+  }
+  .hotelContainer .categorieStarsContainer {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
+  .hotelContainer .categorieStarsContainer .starsContainer {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    display: none;
+  }
+  .hotelContainer .categorieStarsContainer .starsContainer .filledStar {
+    color: #FF6060;
+    font-size: 20px;
+    margin-left: 15px;
+    display: flex;
+    flex-direction: row;
+  }
+  .hotelContainer .categorieStarsContainer .starsContainer .emptyStars {
+    color: #E3E3E3 !important;
+    margin-left: 15px;
+    font-size: 20px;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+  }
+  .hotelContainer .categorieContainer {
+    display: flex;
+    flex-direction: row;
+  }
+  .hotelContainer .categorieContainer .categoryBox {
+    color: white;
+    width: 175px;
+    height: 25px;
+    background-color: #FF6060;
+    border-radius: 10px;
+    margin-right: 20px;
+    text-align: center;
+    padding-top: 5px;
+    font-weight: 500;
+  }
+  .hotelContainer .description-equipements-container {
+    width: 82%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .Redirect {
+    color: #FF6060;
+    position: relative;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .Redirect h1 {
+    font-size: 400px;
+    margin-bottom: 0;
+    margin-top: 25px;
+  }
+  .Redirect h2 {
+    font-size: 36px;
+  }
+  .Redirect a {
+    text-decoration: none !important;
+    color: #FF6060;
+  }
+  .tablette-position {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
+  .tablette-position .starsContainer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    width: 100%;
+  }
+  .tablette-position .starsContainer-tablette {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .tablette-position .starsContainer-tablette .filledStar {
+    color: #FF6060;
+    font-size: 20px;
+    margin-left: 15px;
+    display: flex;
+    flex-direction: row;
+  }
+  .tablette-position .starsContainer-tablette .emptyStars {
+    color: #E3E3E3 !important;
+    margin-left: 15px;
+    font-size: 20px;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+  }
+}
 .logementsContainer {
   width: 90%;
   margin-top: 50px;
@@ -233,7 +454,7 @@
   position: relative;
 }
 .header-container .header .kasa {
-  width: 20%;
+  width: 100%;
   position: left;
   margin: 20px;
 }
@@ -255,6 +476,43 @@
   text-decoration: none;
 }
 
+@media (max-width: 1024px) and (min-width: 375px) {
+  .header-container {
+    width: 100%;
+    position: relative;
+  }
+  .header-container .header {
+    display: flex;
+    padding-left: 0px;
+    flex-direction: row;
+    height: 100px;
+    text-align: center;
+    align-items: center;
+    position: relative;
+  }
+  .header-container .header .kasa {
+    width: 30vw;
+    position: left;
+    margin: 0px;
+  }
+  .header-container .header .Accueil {
+    color: #FF6060;
+    font-size: 3vw;
+    position: absolute;
+    right: 0;
+    padding-right: 20px;
+    justify-content: end;
+  }
+  .header-container .header .Accueil a {
+    margin-left: 20px;
+  }
+  .header-container .header .Accueil a:visited {
+    color: #FF6060;
+  }
+  .header-container .header a {
+    text-decoration: none;
+  }
+}
 .homeContainer {
   width: 90%;
   margin-top: 50px;
@@ -317,17 +575,74 @@
   text-shadow: 2px 2px 4px rgb(0, 0, 0);
 }
 
+@media (max-width: 1024px) and (min-width: 375px) {
+  .homeContainer {
+    width: 90%;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .cardContainer {
+    width: 100%;
+    margin-top: 50px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    background-color: #F6F6F6;
+    padding-bottom: 50px;
+  }
+  .flexRow {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .cardBox {
+    width: 100%;
+    height: 50vw;
+    border-radius: 10px;
+    position: relative;
+  }
+  .parent {
+    display: grid;
+    padding: 0px;
+    margin-right: 25px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: 50px;
+    grid-row-gap: 20px;
+    margin-bottom: 20px;
+  }
+  .div1 {
+    grid-area: 1/1/8/4;
+  }
+  .imageLocation {
+    z-index: 1;
+  }
+  .titleContainer {
+    position: relative;
+  }
+  .titleLocation {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 2;
+    color: #F6F6F6;
+    font-size: 26px;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+  }
+}
 .dropdown {
   position: relative;
   display: inline-block;
   position: relative;
-  width: 200px;
+  width: 100%;
 }
 .dropdown .btn {
   border: none;
   background-color: #FF6060;
   color: white;
-  width: 500px;
+  width: 100%;
   padding: 15px;
   border-radius: 10px;
   font-size: 16px;
@@ -357,7 +672,7 @@
   margin-top: -20px;
   position: relative;
   background-color: #F6F6F6;
-  min-width: 480px;
+  min-width: 34vw;
   z-index: 1;
   padding: 20px 0px 20px 0;
   margin-bottom: 20px;
@@ -379,8 +694,77 @@
   display: none;
 }
 
+@media (max-width: 1024px) and (min-width: 375px) {
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    position: relative;
+    width: 120%;
+  }
+  .dropdown .btn {
+    position: absolute;
+    border: none;
+    background-color: #FF6060;
+    color: white;
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    text-align: left;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 20px;
+  }
+  .dropdown .btn .arrow {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 10px;
+    height: 10px;
+    border-left: 4px solid white;
+    border-bottom: 4px solid white;
+    transform: rotate(135deg);
+    transition: transform 0.3s ease;
+  }
+  .dropdown .btn .arrow-top {
+    transform: translate(-50%, 0) rotate(135deg);
+  }
+  .dropdown .btn .arrow-bottom {
+    transform: translate(-50%, -25%) rotate(-45deg);
+  }
+  .dropdown .dropdown-content {
+    margin-top: -20px;
+    position: relative;
+    background-color: #F6F6F6;
+    min-width: 70vw;
+    z-index: 1;
+    padding: 20px 0px 20px 0;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding: 20px 10px 20px 10px;
+  }
+  .dropdown .dropdown-content div {
+    color: #FF6060;
+    padding: 12px 16px;
+    text-decoration: none;
+  }
+  .dropdown .dropdown-content .dropdown-equipements {
+    white-space: pre-wrap;
+  }
+  .dropdown .dropdown-content-ON {
+    display: block;
+  }
+  .dropdown .dropdown-content-OFF {
+    display: none;
+  }
+}
 .a-propos-container {
   margin-top: 50px;
+  width: 80%;
+  color: #FF6060;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 50px;
   position: relative;
   display: flex;
@@ -399,6 +783,14 @@
   cursor: pointer;
   position: relative;
   margin-bottom: 20px;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(../Fonts/Montserrat-VariableFont_wght.ttf);
+}
+a, div, p, span, button, b, strong {
+  font-family: Montserrat;
 }
 
 /*# sourceMappingURL=App.css.map */

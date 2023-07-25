@@ -3,6 +3,7 @@
     color: $primary-color;
     h1 {
         font-size: 36px;
+        font-weight: 500;
     }
 
 
@@ -60,20 +61,6 @@
                 flex-direction: row;
                 }
         }
-        // .emptyStarsContainer {
-        //     display: flex;
-        //     flex-direction: row;
-        //     position: absolute;
-        //     right: 0;
-        //     .emptyStars {
-        //         color:#E3E3E3 !important;
-        //         margin-left: 5px;
-        //         right: 0;
-        //         display: flex;
-        //         flex-direction: row;
-        //         }
-            
-        // }
     }
     .categorieContainer {
         display: flex;
@@ -91,9 +78,10 @@
         
     }
     .description-equipements-container{
-        width: 82%;
+        width: 100%;
         display: flex;
         flex-direction: row;
+        gap: 76px;
         justify-content:space-between;
     }
 }
@@ -116,3 +104,172 @@
         color: $primary-color;
     }
 }
+.tablette-position {
+    display: none;
+}
+
+@media  (max-width : 1024px) and (min-width : 375px) {
+
+    .hotelContainer {
+        color: $primary-color;
+        h1 {
+            font-size: 30px;
+            font-weight: 400;
+        }
+        .hotelImage {
+            margin-top:0px;
+            border-radius: 25px;
+            width: 100%;
+            height: 415px;
+            object-fit: cover;
+        }
+        .location {
+            margin-top: -10px;
+        }
+        .titleAutor-tablette {
+            width: 50%;
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            align-items: center;
+            color: $primary-color;
+            margin-top: 0;
+            font-size: 24px;
+            margin-left: 20px;
+            .title-autor-position {
+                position: absolute;
+                right: 0px;
+            }
+            .profile-cercle {
+                width: 64px;
+                height: 64px;
+                border-radius: 50%;
+            }
+        }
+        .titleAutor {
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            align-items: center;
+            color: $primary-color;
+            margin-top: 20px;
+            
+            div {
+                display: none;
+            }
+            .title-autor-position {
+                position: absolute;
+                right: 0;
+                font-size: 20px;
+            }
+            .profile-cercle {
+                width: 64px;
+                height: 64px;
+                border-radius: 50%;
+            }
+        }
+        .categorieStarsContainer {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 20px;
+
+            .starsContainer {
+                display: flex;
+                flex-direction: row;
+                position: absolute;
+                top: 40px;
+                left: 0;
+                display: none;
+                .filledStar {
+                    color: $primary-color;
+                    font-size: 20px;
+                    margin-left: 15px;
+                    display: flex;
+                    flex-direction: row;
+                }
+                .emptyStars {
+                    color:#E3E3E3 !important;
+                    margin-left: 15px;
+                    font-size: 20px;
+                    right: 0;
+                    display: flex;
+                    flex-direction: row;
+                    }
+            }
+        }
+        .categorieContainer {
+            display: flex;
+            flex-direction: row;
+            .categoryBox {
+                color:white;
+                width: 175px;
+                height: 25px;
+                background-color: $primary-color;
+                border-radius: 10px;
+                margin-right: 20px;
+                text-align: center;
+                padding-top: 5px;
+                font-weight: 500;
+            }   
+        }
+        .description-equipements-container{
+            width: 82%;
+            display: flex;
+            flex-direction: column;
+            justify-content:space-between;
+        }
+    }
+    
+    .Redirect {
+        color : $primary-color;
+        position: relative;
+        text-align: center;
+        margin-bottom: 50px;
+        h1 {
+            font-size: 400px;
+            margin-bottom: 0;
+            margin-top:25px;
+        }
+        h2 {
+            font-size: 36px;
+        } 
+        a {
+            text-decoration: none !important;
+            color: $primary-color;
+        }
+    }
+
+    .tablette-position {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 20px;
+        .starsContainer {
+            display: flex;
+            flex-direction: row;
+            margin-top: 20px;
+            width: 100%;
+        }
+        .starsContainer-tablette {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            .filledStar {
+                color: $primary-color;
+                font-size: 20px;
+                margin-left: 15px;
+                display: flex;
+                flex-direction: row;
+            }
+            .emptyStars {
+                color:#E3E3E3 !important;
+                margin-left: 15px;
+                font-size: 20px;
+                right: 0;
+                display: flex;
+                flex-direction: row;
+                }
+        }
+    }
+}
+

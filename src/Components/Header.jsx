@@ -1,15 +1,23 @@
 import '../Styles/App.css';
 import Kasa from '../Images/Kasa.jpg'
 import Home from '../Pages/Home/index'
+import { Link } from 'react-router-dom'
 
 function Header() {
     return (
         <div className='header-container'>
             <div className='header'>
-                <img src={Kasa} className="kasa" alt="logo" />
-                <div className='Accueil'>          
-                    <a href='../Home'>Accueil</a>                  
-                    <a>A propos</a>
+                <Link to={`/Home/`}>
+                    <img src={Kasa} className="kasa" alt="logo" />
+                </Link>
+                <div className='Accueil'>
+                    <Link to={`/Home/`}>          
+                        Accueil
+                    </Link>
+                    <Link to={`/Propos/`}>
+                        A propos
+                    </Link>                  
+                    
                 </div>
             </div>
         </div>

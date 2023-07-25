@@ -2,11 +2,10 @@
 
 .carousel {
     position: relative;
-    width: 400px;
-    height: 200px;
+    width: 100%;
     overflow: hidden;
   }
-  
+
   .slides-container {
     display: flex;
     transition: transform 0.3s ease-in-out;
@@ -29,14 +28,56 @@
     font-size: 14px;
     cursor: pointer;
   }
-  .carousel__item {
-    flex: 0 0 300px;
-    margin-right: 10px;
+  .carousel-container {
+    display: flex;
+    position: relative;
+    overflow-x: scroll;
+    width: 100%;
+    border-radius: 25px;
+    
+
+    .left-arrow {
+    position: absolute;
+    left: 0;
+    top: 40%;
+    }
+
+    .right-arrow {
+    position: absolute;
+    right: 0;
+    top: 40%;
+    }
+
+    .carousel-span {
+    color: white;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    }
+    .carousel-image {
+      width: 100%;
+      object-fit: cover;
+      height: 300px;
+    }
+  
+    .carousel__item {
+      flex: 0 0 300px;
+      margin-right: 10px;
+  
+      img {
+        width: 100%;
+        height: auto;
+      }
+  
+      .carousel__caption {
+        text-align: center;
+        margin-top: 10px;
+      }
+    }
   }
-  .carousel__caption {
-    text-align: center;
-    margin-top: 10px;
-  }
+
+ 
+
   .prev-btn {
     left: 10px;
   }

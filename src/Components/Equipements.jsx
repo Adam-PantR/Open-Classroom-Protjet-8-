@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import '../Styles/App.css'
 import Annonces from '../Datas/Annonces.json'
+import { useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 
 
 function Equipements() {
-
-    const appartementCosy = Annonces.filter(item => item.id === 'b9123946');
+    const { annoncesId } = useParams()
+    const appartementCosy = Annonces.filter(item => item.id === annoncesId);
     const currentAppartement = appartementCosy[0];
     const [isVisible, setIsVisible] = useState(false);
       

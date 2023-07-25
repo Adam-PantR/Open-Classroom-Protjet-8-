@@ -13,7 +13,7 @@
         position:relative;
 
     .kasa {
-        width: 20%;
+        width: 100%;
         position: left;
         margin: 20px;
     }
@@ -36,3 +36,42 @@
     }
     }
 }
+
+
+@media (max-width: 1024px) and (min-width: 375px) {
+    .header-container { 
+        width:100%;
+        position: relative;
+        .header {
+            display: flex;
+            padding-left: 0px; 
+            flex-direction: row;
+            height: 100px;
+            text-align: center;
+            align-items: center;
+            position:relative;
+        .kasa {
+            width: 30vw;
+            position: left;
+            margin: 0px;
+        }
+        .Accueil {
+            color: $primary-color;
+            font-size: 3vw;
+            position: absolute;
+            right: 0;
+            padding-right: 20px;
+            justify-content: end;
+            a{
+                margin-left: 20px;
+            }
+            a:visited{
+                color: $primary-color;
+            }
+        }
+        a {
+            text-decoration: none;
+        }
+        }
+    }
+  }

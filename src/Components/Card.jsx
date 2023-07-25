@@ -1,21 +1,21 @@
 import '../Styles/App.css'
-import Annonces from '../Datas/Annonces.json'
+import { useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+// import Annonces from '../Datas/Annonces.json'
 
 function Card(props) {
-    const cards = Annonces.map((item) => (
+    const cards = props.annonces.map((item) => (
         <div key={item.id}  >
-            <a href='#' className='imageLocation titleContainer' >
+            <Link to={`/Logements/${item.id}`} className='imageLocation titleContainer' >
                 <img src={item.cover} alt={item.title}  className="cardBox"/>
                 <h2 className='titleLocation'>{item.title}</h2>
-            </a>
-          
+            </Link>       
         </div>
       ));
     return (
         <div className='cardContainer parent'>
             {cards}
-        </div>
-        
+        </div>  
     )
 }
 
