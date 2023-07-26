@@ -16,9 +16,9 @@ ReactDOM.render(
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/home" exact element={<Home />} />
-                <Route path="/redirect" exact element={<Redirect />} />
                 <Route path="/logements/:annoncesId" exact element={<Logements />} />
                 <Route path="/propos" exact element={<Propos />} />
+                <Route path="*" element={<Redirect />} />
             </Routes>
             <Footer />
         </Router>   
