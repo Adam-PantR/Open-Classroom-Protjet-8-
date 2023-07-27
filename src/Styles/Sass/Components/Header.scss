@@ -5,6 +5,7 @@
     position: relative;
     .header {
         display: flex;
+        margin-top:50px;
         padding-left: 80px; 
         flex-direction: row;
         height: 100px;
@@ -43,6 +44,7 @@
         width:100%;
         position: relative;
         .header {
+            margin-top: 20px;
             display: flex;
             padding-left: 0px; 
             flex-direction: row;

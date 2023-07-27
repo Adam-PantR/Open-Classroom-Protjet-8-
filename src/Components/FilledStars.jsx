@@ -3,7 +3,6 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 import "../Styles/App.css";
 import Annonces from "../Datas/Annonces.json";
 import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
 
 function FilledStars() {
   const { annoncesId } = useParams();
@@ -14,8 +13,8 @@ function FilledStars() {
   if (rating > 0) {
     for (let i = 0; i < rating; i++) {
       componentsToRender.push(
-        <div className="filledStar">
-          <FontAwesomeIcon key={"filledStar" + i} icon={faStar} />
+        <div className="filledStar" key={"filledStar" + rating + i}>
+          <FontAwesomeIcon icon={faStar} />
         </div>
       );
     }
@@ -25,8 +24,8 @@ function FilledStars() {
   if (unRating > 0) {
     for (let i = 0; i < unRating; i++) {
       componentsToRenderEmpty.push(
-        <div className="emptyStars">
-          <FontAwesomeIcon key={"emptyStar" + i} icon={faStar} />
+        <div className="emptyStars" key={"emptyStar" + rating + i}>
+          <FontAwesomeIcon icon={faStar} />
         </div>
       );
     }

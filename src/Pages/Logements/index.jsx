@@ -4,13 +4,21 @@ import FilledStars from "../../Components/FilledStars";
 import Annonces from "../../Datas/Annonces.json";
 import Carrousel from "../../Components/Carrousel";
 import Description from "../../Components/Description";
-import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
+import Redirect from "../../Components/Redirect";
 
 function Logements() {
   const { annoncesId } = useParams();
   const appartementCosy = Annonces.filter((item) => item.id === annoncesId);
   const currentAppartement = appartementCosy[0];
+
+  const navigate = useNavigate();
+  const isValidAnnoncesId = appartementCosy;
+  if (!isValidAnnoncesId) {
+    navigate(<Redirect />);
+    return null;
+  }
+
   return (
     <div className="logementsContainer">
       <div className="hotelContainer">

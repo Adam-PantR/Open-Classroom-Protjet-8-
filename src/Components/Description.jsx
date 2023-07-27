@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "../Styles/App.css";
 import Annonces from "../Datas/Annonces.json";
 import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
 
 function Description(props) {
   const { annoncesId } = useParams();
@@ -12,7 +11,6 @@ function Description(props) {
 
   function handleClick() {
     setIsVisible((isVisible) => !isVisible);
-    console.log(isVisible);
   }
   return (
     <div className="dropdown" id="dropdownMenu" onClick={handleClick}>

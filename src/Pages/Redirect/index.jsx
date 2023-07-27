@@ -1,17 +1,11 @@
-import '../../Styles/App.css'
-import Header from "../../Components/Header"
-import Redirect from "../../Components/Redirect"
-import Footer from "../../Components/Footer"
-
-
+import "../../Styles/App.css";
+import Redirect from "../../Components/Redirect";
 
 function Redirected() {
-    return (
-      <div>
-        <Redirect />
-      </div>
-      
-    )
-  }
-  export default Redirected
-  
+  return (
+    <div>
+      <Redirect />
+    </div>
+  );
+}
+export default Redirected;
