@@ -22,7 +22,7 @@ function Propos() {
           dropdown="La bienveillance fait partie des caleurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme."
         />
         <Description
-          name="Respect"
+          name="Securité"
           dropdown="La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifietr que les standards sont bien repectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes."
         />
       </div>

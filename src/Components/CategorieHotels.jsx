@@ -1,12 +1,7 @@
 import "../Styles/App.css";
-import Annonces from "../Datas/Annonces.json";
-import { useParams } from "react-router-dom";
 
-function CategorieHotels() {
-  const { annoncesId } = useParams();
-  const appartement = Annonces.filter((item) => item.id === annoncesId);
-  const currentAppartement = appartement[0];
-  const appartementTags = currentAppartement.tags;
+function CategorieHotels(props) {
+  const appartementTags = props.tags;
 
   return (
     <div className={"categorieContainer"}>

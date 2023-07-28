@@ -4,7 +4,7 @@ import FilledStars from "../../Components/FilledStars";
 import Annonces from "../../Datas/Annonces.json";
 import Carrousel from "../../Components/Carrousel";
 import Description from "../../Components/Description";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Redirect from "../../Components/Redirect";
 
 function Logements() {
@@ -12,17 +12,10 @@ function Logements() {
   const appartementCosy = Annonces.filter((item) => item.id === annoncesId);
   const currentAppartement = appartementCosy[0];
 
-  const navigate = useNavigate();
-  const isValidAnnoncesId = appartementCosy;
-  if (!isValidAnnoncesId) {
-    navigate(<Redirect />);
-    return null;
-  }
-
-  return (
+  return (!currentAppartement ? (<Redirect />) : (
     <div className="logementsContainer">
       <div className="hotelContainer">
-        <Carrousel />
+        <Carrousel pictures={currentAppartement.pictures}/>
         <div className="titleAutor">
           <h1>{currentAppartement.title}</h1>
           <div className="titleAutor title-autor-position">
@@ -39,15 +32,15 @@ function Logements() {
         <p className="location">{currentAppartement.location}</p>
         <div className="categorieStarsContainer">
           <div className="categorieContainer">
-            <CategorieHotels />
+            <CategorieHotels tags={currentAppartement.tags}/>
           </div>
           <div className="starsContainer">
-            <FilledStars />
+            <FilledStars rating={currentAppartement.rating}/>
           </div>
         </div>
         <div className="tablette-position">
           <div className="starsContainer-tablette">
-            <FilledStars />
+            <FilledStars rating={currentAppartement.rating}/>
           </div>
           <div className="titleAutor-tablette title-autor-position">
             <p>{currentAppartement.host.name}</p>
@@ -72,6 +65,7 @@ function Logements() {
         </div>
       </div>
     </div>
+    )
   );
 }
 export default Logements;

@@ -1,14 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import "../Styles/App.css";
-import Annonces from "../Datas/Annonces.json";
-import { useParams } from "react-router-dom";
 
-function FilledStars() {
-  const { annoncesId } = useParams();
-  const appartementCosy = Annonces.filter((item) => item.id === annoncesId);
-  const currentAppartement = appartementCosy[0];
-  const rating = currentAppartement.rating;
+function FilledStars(props) {
+  const rating = props.rating;
   const componentsToRender = [];
   if (rating > 0) {
     for (let i = 0; i < rating; i++) {
@@ -19,7 +14,7 @@ function FilledStars() {
       );
     }
   }
-  const unRating = 5 - currentAppartement.rating;
+  const unRating = 5 - rating;
   const componentsToRenderEmpty = [];
   if (unRating > 0) {
     for (let i = 0; i < unRating; i++) {

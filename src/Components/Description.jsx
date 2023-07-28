@@ -1,14 +1,9 @@
 import React, { useState } from "react";
 import "../Styles/App.css";
-import Annonces from "../Datas/Annonces.json";
-import { useParams } from "react-router-dom";
 
 function Description(props) {
-  const { annoncesId } = useParams();
-  const appartementCosy = Annonces.filter((item) => item.id === annoncesId);
-  const currentAppartement = appartementCosy[0];
-  const [isVisible, setIsVisible] = useState(false);
 
+  const [isVisible, setIsVisible] = useState(false);
   function handleClick() {
     setIsVisible((isVisible) => !isVisible);
   }

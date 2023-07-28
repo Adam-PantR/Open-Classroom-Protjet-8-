@@ -1,16 +1,10 @@
-import React, { useState, useEffect } from "react";
-import Annonces from "../Datas/Annonces.json";
+import React, { useState } from "react";
 import "../Styles/App.css";
-import { useParams } from "react-router-dom";
 import LeftArrow from "../Images/left-arrow.png";
 import RightArrow from "../Images/right-arrow.png";
 
-const Carousel = () => {
-  // const [images, setImages] = useState([]);
-  const { annoncesId } = useParams();
-  const appartementCosy = Annonces.filter((item) => item.id === annoncesId);
-  const currentAppartement = appartementCosy[0];
-  const pictures = currentAppartement.pictures;
+const Carousel = (props) => {
+  const pictures = props.pictures;
   const [carouselIndex, setcarouselIndex] = useState(0);
   function toLeft() {
     carouselIndex == 0
