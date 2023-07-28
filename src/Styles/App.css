@@ -24,7 +24,7 @@
   text-shadow: 2px 2px 2px black;
 }
 
-@media (max-width: 1024px) and (min-width: 375px) {
+@media (max-width: 1024px) {
   .divBanner {
     width: 100%;
     display: flex;
@@ -274,7 +274,7 @@
   display: none;
 }
 
-@media (max-width: 1024px) and (min-width: 375px) {
+@media (max-width: 1024px) {
   .hotelContainer {
     color: #FF6060;
   }
@@ -481,7 +481,7 @@
   text-decoration: none;
 }
 
-@media (max-width: 1024px) and (min-width: 375px) {
+@media (max-width: 1024px) {
   .header-container {
     width: 100%;
     position: relative;
@@ -581,7 +581,7 @@
   text-shadow: 2px 2px 4px rgb(0, 0, 0);
 }
 
-@media (max-width: 1024px) and (min-width: 375px) {
+@media (max-width: 1024px) {
   .homeContainer {
     width: 90%;
     margin-top: 50px;
@@ -700,7 +700,7 @@
   display: none;
 }
 
-@media (max-width: 1024px) and (min-width: 375px) {
+@media (max-width: 1024px) {
   .dropdown {
     position: relative;
     display: inline-block;
